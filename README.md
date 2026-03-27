@@ -1,7 +1,11 @@
 # Bypass SSO for Salesforce REST API Connectivity through Boomi
 
 ## Problem Statement:
-When we configure the Environment Extension in Boomi for a Salesforce REST Connector, such as Salesforce Platform Event Connector or HTTP Client Connector (using OAuth2.0 as the Authentication Type and Authorization Code as the Grant Type), we have to generate the Access Token using the Password for the first time, through the Salesforce Login UI. We will have to do the same as a one-time activity when Salesforce password is refreshed. When only SSO login is enabled for the Boomi integration user, then the login won't be possible. 
+When we configure the Environment Extension in Boomi for a Salesforce REST Connector, such as Salesforce Platform Event Connector or HTTP Client Connector (using OAuth2.0 as the Authentication Type and Authorization Code as the Grant Type), we have to generate the Access Token using the Password for the first time, through the Salesforce Login UI. 
+
+We will have to do the same as a one-time activity whenever the Salesforce password for the Boomi IntegrationUser is refreshed. 
+
+This is required only when SSO login is enabled for the Boomi Integration User.
 
 ## Solution:
 **Step-1:** Login to Salesforce, preferably as an Admin user.
